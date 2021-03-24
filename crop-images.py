@@ -65,7 +65,7 @@ def createDir(path):
     		print ("Successfully created the directory %s " % path)
 def createDirs(path):
 	try:
-    		os.mkdirs(path)
+    		os.makedirs(path)
 	except OSError:
     		print ("Creation of the directory %s failed" % path)
 	else:
