@@ -74,7 +74,7 @@ def createDirs(path):
 currentpath = os.getcwd()
 
 print ("The current working directory is %s" % currentpath)
-createDirs(currentpath + ¨outdir/train/def-01¨)
+createDirs(currentpath + "outdir/train/def-01")
 cropDir(path+"train/def-01/","outdir/train/def-01/")
 cropDir(path+"train/def-02/","outdir/train/def-02/")
 cropDir(path+"train/def-03/","outdir/train/def-03/")
