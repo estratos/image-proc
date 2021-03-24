@@ -56,16 +56,25 @@ def cropDir(inpath,outpath):
 
 
     return
-def createDir():
+def createDir(path):
 	try:
     		os.mkdir(path)
 	except OSError:
     		print ("Creation of the directory %s failed" % path)
 	else:
     		print ("Successfully created the directory %s " % path)
+def createDirs(path):
+	try:
+    		os.mkdirs(path)
+	except OSError:
+    		print ("Creation of the directory %s failed" % path)
+	else:
+    		print ("Successfully created the directory %s " % path)
 
 currentpath = os.getcwd()
+
 print ("The current working directory is %s" % currentpath)
+createDirs(currentpath + ¨outdir/train/def-01¨)
 cropDir(path+"train/def-01/","outdir/train/def-01/")
 cropDir(path+"train/def-02/","outdir/train/def-02/")
 cropDir(path+"train/def-03/","outdir/train/def-03/")
