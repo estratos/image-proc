@@ -1,3 +1,9 @@
+# Estratos Electronics SAS de CV
+#
+#  Crop images script to create a 512 x 512 pix image from capture directories
+#
+#
+
 from PIL import Image
 import os.path, sys
 path = "/home/nvidia/work/Model-Train-Data/reflectorModel/"
@@ -50,7 +56,16 @@ def cropDir(inpath,outpath):
 
 
     return
+def createDir():
+	try:
+    		os.mkdir(path)
+	except OSError:
+    		print ("Creation of the directory %s failed" % path)
+	else:
+    		print ("Successfully created the directory %s " % path)
 
+currentpath = os.getcwd()
+print ("The current working directory is %s" % currentpath)
 cropDir(path+"train/def-01/","outdir/train/def-01/")
 cropDir(path+"train/def-02/","outdir/train/def-02/")
 cropDir(path+"train/def-03/","outdir/train/def-03/")
